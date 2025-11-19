@@ -43,6 +43,6 @@ public class Ejemplo10 {
         }
                 
         System.out.printf("%s\n", cadena);
-        
+        // revisar para la siguiente clase 
     }
 }
