@@ -19,37 +19,33 @@ public class Proyecto01 {
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
         
-        String mensaje_final= "";   
+       String mensaje_final = "";
         String nombre;
         int dias;
         double costo_dia;
         double valor_cancelar;
-
         int contador = 1;
 
         while (contador <= 5) {
-            System.out.println("Ingrese el nombre del empleado:");
+            System.out.println("Ingrese nombre de empleado");
             nombre = entrada.nextLine();
 
-            System.out.println("Ingrese los días trabajados:");
+            System.out.println("Ingrese dias trabajados");
             dias = entrada.nextInt();
 
-            System.out.println("Ingrese el valor de costo por día:");
+            System.out.println("Ingrese valor de costo dia");
             costo_dia = entrada.nextDouble();
-            
-            entrada.nextLine(); 
 
             valor_cancelar = dias * costo_dia;
-            
-            mensaje_final
-                    = String.format("%sNombre: días %d, costo por día $%.2f, "
-                            + "total $%.2fn", nombre, dias, costo_dia,
-                            valor_cancelar , mensaje_final);
-                            
+            mensaje_final = String.format("%sNombre: %s dias %d, costo por dia"
+                    + " $%.2f, total $%.2f\n", mensaje_final, nombre, dias,
+                    costo_dia, valor_cancelar);
 
-            contador= contador+1;
+            entrada.nextLine();
+            contador = contador + 1;
         }
 
-        System.out.printf("\n mensaje_final ");
+        System.out.printf("%s\n", mensaje_final);
+
     }
 }
